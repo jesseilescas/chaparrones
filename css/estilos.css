@@ -1,0 +1,255 @@
+/*VARIABLES*/
+:root{
+    --fuente-principal: 'News Cycle', sans-serif;
+    --coloPrincipal: #BA337A;
+    --colorUno: #A3BD31 ;                             
+    --colorDos: #F1E8AC;
+    --blanco: #fff;
+    --negro: #000;
+    --gris: rgba(182, 182, 182);
+}
+/*GLOBALES*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 62.5%;
+    background-color: var(--blanco);
+    font-family: var(--fuente-principal);
+    
+}
+a{
+    text-decoration: none; 
+}
+h1{
+    font-weight: 700;
+    font-size: 2.5rem;       
+}
+h2{
+    font-weight: 700;
+    font-size: 2rem;       
+}
+h3{
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+}
+.icono{
+    color: var(--blanco);
+    font-size: 1.5rem;
+    
+}
+
+/*NAVEGACION*/
+
+.nav{
+    background-color: var(--coloPrincipal);
+    padding: 1rem;  
+}
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    flex-wrap: wrap;
+}
+.nav-enlace{
+    color: var(--blanco);
+    padding: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+.btn-primario {
+    color: var(--blanco);
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.2rem;
+    background-color: var(--colorUno);
+    padding: 0.25rem 1rem;
+
+}
+/*INICIO*/
+.contenedor h2{
+    text-align: center;
+}
+.arrow-slider{
+    color: var(--coloPrincipal);
+    font-size: 2.5rem;
+}
+.hero-section{
+    background-image: url(../img/hero-section.png);
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: solid 2px var(--gris);
+    margin-bottom: 20px;
+}
+.informacion-slider {
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.producto{
+    gap: 0.5rem;
+    margin: 15px;
+}
+
+.producto__imagen img{
+    width: 100%; 
+}
+
+.producto__detalle{
+    font-size: 1.2rem;
+    text-align: center;
+}
+.producto__precio{
+    font-size: 1rem;
+    text-align: center;
+    color: var(--coloPrincipal);
+    font-weight: 700;
+}
+.producto__carrito input{
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    text-align: center;
+}
+.producto__carrito button{
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    text-align: center;
+    border: none;
+    background-color: var(--colorUno);
+    color: var(--blanco);
+    cursor: pointer;
+
+}
+.tienda-incio{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    border-bottom: solid 2px var(--gris);
+    margin-bottom: 20px;
+}
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    border-bottom: solid 8px var(--gris);
+    margin-bottom: 20px;
+}
+.galeria img{
+    width: 100%;
+}
+.footerInfo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+}
+.direccion, .horarios{
+    font-size: 1.4rem;
+}
+/*NOSOTROS*/
+.nosotros{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 20px;
+    border-bottom: solid 8px var(--gris);
+}
+.nosotros__contenido{
+    text-align: justify;
+    font-size: 1.2rem;
+}
+.nosotros__imagen img{
+    width: 100%;
+
+}
+/*RESPONSIVE*/
+@media (max-width: 768px){
+    /*INICIO*/
+    .tienda-incio{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        
+    }
+    .footerInfo{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        justify-content: center;     
+    }
+    .direccion, .horarios{
+        font-size: 1rem;
+        text-align: center;
+    }
+    .nosotros{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        margin: 20px;
+        border-bottom: solid 8px var(--gris);
+    }
+    /*NOSOTROS*/
+    .nosotros{
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
+@media (max-width: 425px){
+    /*INICIO*/
+    .menu{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        gap: 0.5rem;
+    }
+    .icono{
+        display: none;
+        
+    }
+    .tienda-incio{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+        
+    }
+    .footerInfo{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    /*NOSOTROS*/
+    .nosotros{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .nosotros img{
+        width: 100%;
+    }
+}
+
+
