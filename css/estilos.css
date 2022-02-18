@@ -255,6 +255,67 @@ h3{
     width: 100%;
 
 }
+/*TIENDA*/
+.formulario-personalizadas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.formulario-personalizadas input{
+    background-color: var(--colorUno);
+    border: none;
+    width: 100%;
+    text-align: center;
+    
+}
+.formulario-personalizadas input:focus-visible{
+    outline: none;
+}
+.tienda p{
+    background-color: #ffc107;
+    font-weight: 700;
+    text-align: center;
+}
+.formulario-personalizadas button{
+    background-color: var(--coloPrincipal);
+    margin: 1rem;
+    padding: .5rem 4rem;
+    color: var(--blanco);
+    border: none;
+    width: 100%;
+}
+/*BLOG*/
+.imagen-blog{
+    height: 40vh;
+    object-fit: cover;
+}
+/*CONTACTO*/
+.formulario-contacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+.formulario-contacto input{
+    border: none;
+    border-bottom: 3px solid var(--gris);
+}
+.formulario-contacto textarea{
+    border: none;
+    border-bottom: 3px solid var(--gris);
+}
+.formulario-contacto button{
+    background-color: var(--coloPrincipal);
+    color: var(--blanco);
+    text-transform: uppercase;
+    border: none;
+}
 
 /*RESPONSIVE*/
 @media (max-width: 768px){
