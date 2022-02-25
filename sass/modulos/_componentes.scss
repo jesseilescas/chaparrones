@@ -1,0 +1,28 @@
+@import"./variables";
+.logo{
+    display: flex;
+    justify-content: center;
+    img{
+        width: 85%;
+    }
+}
+.icono{
+    color: var(--blanco);
+    font-size: 1.8rem;
+    
+}
+.cerrar-icono{
+    font-size: 2rem;
+     
+}
+.centrar{
+    display: flex;
+    justify-content: center;
+}
+.bg-primario{
+    background-color: var(--coloPrincipal);
+    &:visited{
+        background-color: var(--colorUno);
+        border: var(--colorUno) solid 1px;
+    }
+}

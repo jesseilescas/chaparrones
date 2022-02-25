@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-size: 62.5%;
+  background-color: var(--blanco);
+  font-family: var(--fuente-principal);
+  font-size: 1.4rem; }
+
+a {
+  text-decoration: none; }
+
+.logo {
+  display: flex;
+  justify-content: center; }
+  .logo img {
+    width: 85%; }
+
+.icono {
+  color: var(--blanco);
+  font-size: 1.8rem; }
+
+.cerrar-icono {
+  font-size: 2rem; }
+
+.centrar {
+  display: flex;
+  justify-content: center; }
+
+.bg-primario {
+  background-color: var(--coloPrincipal); }
+  .bg-primario:visited {
+    background-color: var(--colorUno);
+    border: var(--colorUno) solid 1px; }
