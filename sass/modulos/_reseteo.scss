@@ -1,3 +1,9 @@
+$colorPrincipal:#BA337A;
+$colorSecundario: #A3BD31;
+$blanco: #fff;
+$negro: #000;
+$gris: rgb(201, 201, 201);
+$fuentePrincipal: 'News Cycle', sans-serif;
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,8 +11,8 @@
 }
 body{
     font-size: 62.5%;
-    background-color: var(--blanco);
-    font-family: var(--fuente-principal);
+    background-color: $blanco;
+    font-family: $fuentePrincipal;
     font-size: 1.4rem;
     
 }

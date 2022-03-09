@@ -1,13 +1,32 @@
-@import"./variables";
+$colorPrincipal:#BA337A;
+$colorSecundario: #A3BD31;
+$blanco: #fff;
+$negro: #000;
+$gris: rgb(201, 201, 201);
+$fuentePrincipal: 'News Cycle', sans-serif;
+a{
+    text-decoration: none; 
+}
+h1{
+    font-weight: 700;
+    font-size: 2.5rem;       
+}
+h2{
+    font-weight: 700;
+    font-size: 2rem;       
+}
+h3{
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
 .logo{
     display: flex;
     justify-content: center;
-    img{
-        width: 85%;
-    }
+    
 }
 .icono{
-    color: var(--blanco);
+    color: $blanco;
     font-size: 1.8rem;
     
 }
@@ -20,9 +39,308 @@
     justify-content: center;
 }
 .bg-primario{
-    background-color: var(--coloPrincipal);
+    background-color: $colorPrincipal;
+}
+.boton-primario{
+    background-color: $colorSecundario;
+    border: $colorSecundario solid 1px;
     &:visited{
-        background-color: var(--colorUno);
-        border: var(--colorUno) solid 1px;
+        background-color: $colorSecundario;
+        border: $colorPrincipal solid 1px;
+    }
+    &:active{
+        background-color: $colorSecundario;
+        border: $colorSecundario solid 1px;
+    }
+    &:hover{
+        background-color: $colorSecundario;
+        border: $colorSecundario solid 1px;
+        transform: scale(1.3,1.3);
+        transition: .8s;
+    }
+    
+}
+.navegacion{
+    background-color: $colorPrincipal;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    &-inferior{
+        background-color: $colorPrincipal;
+        padding: 1rem;
+        display: flex;
+    }
+    
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+}
+.nav-enlace{
+    color: $blanco;
+    padding: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    &:hover{
+        font-weight: 700;
+        color: $negro;
+        transition: .5s;
+    }
+}
+.social-media a{
+    padding: 2rem;
+}
+.hero-img{
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    
+}
+.producto{
+    position: relative;
+}
+.detalle{
+    font-size: 1rem;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 62%;
+    opacity: 0%;
+    transition: 0.5s;
+    &:hover{
+        transition: 0.5s;
+        opacity: 100%;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+    & a{
+        background-color: $colorPrincipal;
+        padding: 0.25rem 1rem;
+        font-weight: 700;
+        color: $blanco;
+    }
+}
+.producto{
+    &__imagen img{
+        width: 100%; 
+    }
+    &__detalle{
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    &__precio{
+        font-size: 1rem;
+        text-align: center;
+        color: $colorPrincipal;
+        font-weight: 700;
+    }
+    &__carrito input{
+        width: 100%;
+        margin-bottom: 1rem;
+        padding: 0.5rem;
+        text-align: center;
+    }
+    &__carrito button{
+        width: 100%;
+        margin-bottom: 1rem;
+        padding: 0.8rem;
+        text-align: center;
+        border: none;
+        background-color: $colorSecundario;
+        color: $blanco;
+        cursor: pointer;
+        &:hover{
+            transform: scale(1.1,1.1);
+            background-color: $colorPrincipal;
+            transition: 1s;  
+        }
+    }
+}
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    border-bottom: solid 8px $gris;
+    margin-bottom: 20px;
+}
+.galeria img{
+    width: 100%;
+}
+.personalizar-animacion{
+    background-image: url(../img/bg-animation.jpg);    
+    height: 50vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    text-align: center;
+}
+.personalizar-animacion h2::before{
+    content: '';
+    animation: cambiarTexto 10s linear infinite;
+    color: $colorPrincipal;
+}
+@keyframes cambiarTexto{
+    0%{
+        content: '"CREAMOS A TU PERSONAJE"';
+        color: $colorSecundario
+    }
+    25%{
+        content: '1.- Elige tu personaje';
+        color: $colorPrincipal
+    }
+    50%{
+        content: '2.- Envia tu foto';
+        color: $colorSecundario
+    }
+    75%{
+        content: '3.- Agendamos tu pedido';
+        color: $colorPrincipal
+    }
+    100%{
+        content: '4.- Entrega de la piñata';
+        color: $colorSecundario
+    }
+}
+.footerInfo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+}
+.direccion, .horarios{
+    font-size: 1.4rem;
+}
+.mapa iframe{
+    width: 100%;
+}
+.nosotros{
+    &__contenido{
+        text-align: justify;
+        font-size: 1.2rem;
+    }
+    &__imagen img {
+        width: 100%;
+    }
+}
+.formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &-personalizadas{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; 
+    }
+    &-personalizadas input{
+        background-color: $colorSecundario;
+        border: none;
+        width: 100%;
+        text-align: center;
+    }
+    &-personalizadas button{
+        background-color: $colorPrincipal;
+        margin: 1rem;
+        padding: .5rem 4rem;
+        color: $blanco;
+        border: none;
+        width: 100%;
+    }
+    &-personalizadas input:focus-visible{
+        outline: none;
+    }
+}
+.tienda p{
+    background-color: #ffc107;
+    font-weight: 700;
+    text-align: center;
+}
+.imagen-blog{
+    height: 40vh;
+    object-fit: cover;
+}
+.formulario{
+    &-contacto{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+        & input{
+            border: none;
+            border-bottom: 3px solid $gris;
+        }
+        & textarea{
+            border: none;
+            border-bottom: 3px solid $gris;
+        }
+        & button{
+            background-color: $colorSecundario;
+            color: $blanco;
+            text-transform: uppercase;
+            border: none;
+            &:hover{
+                background-color: $colorPrincipal;
+            }
+        }  
+    }
+}
+@media (max-width: 768px){
+    .tienda-incio{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        
+    }
+    .footerInfo{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        justify-content: center;     
+    }
+    .direccion, .horarios{
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+@media (max-width: 425px){
+    .menu{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+    }
+    .social-media a {
+        padding: 1rem;
+    }
+
+    .footerInfo{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+
+}
+@each $entrada in entrada1, entrada2, entrada3{
+    .imgBlog#{$entrada}{
+        background-image: url(../img/#{$entrada}.jpg);
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 60vh;
+        object-fit: cover;
+        background-position: center center;
+        background-size: cover;
+
     }
 }

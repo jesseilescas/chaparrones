@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,21 +6,34 @@
 
 body {
   font-size: 62.5%;
-  background-color: var(--blanco);
-  font-family: var(--fuente-principal);
+  background-color: #fff;
+  font-family: "News Cycle", sans-serif;
   font-size: 1.4rem; }
 
 a {
   text-decoration: none; }
 
+a {
+  text-decoration: none; }
+
+h1 {
+  font-weight: 700;
+  font-size: 2.5rem; }
+
+h2 {
+  font-weight: 700;
+  font-size: 2rem; }
+
+h3 {
+  font-weight: 700;
+  font-size: 1.5rem; }
+
 .logo {
   display: flex;
   justify-content: center; }
-  .logo img {
-    width: 85%; }
 
 .icono {
-  color: var(--blanco);
+  color: #fff;
   font-size: 1.8rem; }
 
 .cerrar-icono {
@@ -30,7 +44,282 @@ a {
   justify-content: center; }
 
 .bg-primario {
-  background-color: var(--coloPrincipal); }
-  .bg-primario:visited {
-    background-color: var(--colorUno);
-    border: var(--colorUno) solid 1px; }
+  background-color: #BA337A; }
+
+.boton-primario {
+  background-color: #A3BD31;
+  border: #A3BD31 solid 1px; }
+  .boton-primario:visited {
+    background-color: #A3BD31;
+    border: #BA337A solid 1px; }
+  .boton-primario:active {
+    background-color: #A3BD31;
+    border: #A3BD31 solid 1px; }
+  .boton-primario:hover {
+    background-color: #A3BD31;
+    border: #A3BD31 solid 1px;
+    transform: scale(1.3, 1.3);
+    transition: .8s; }
+
+.navegacion {
+  background-color: #BA337A;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between; }
+  .navegacion-inferior {
+    background-color: #BA337A;
+    padding: 1rem;
+    display: flex; }
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: 2rem; }
+
+.nav-enlace {
+  color: #fff;
+  padding: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.8rem; }
+  .nav-enlace:hover {
+    font-weight: 700;
+    color: #000;
+    transition: .5s; }
+
+.social-media a {
+  padding: 2rem; }
+
+.hero-img {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover; }
+
+.producto {
+  position: relative; }
+
+.detalle {
+  font-size: 1rem;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 62%;
+  opacity: 0%;
+  transition: 0.5s; }
+  .detalle:hover {
+    transition: 0.5s;
+    opacity: 100%;
+    background-color: rgba(255, 255, 255, 0.5); }
+  .detalle a {
+    background-color: #BA337A;
+    padding: 0.25rem 1rem;
+    font-weight: 700;
+    color: #fff; }
+
+.producto__imagen img {
+  width: 100%; }
+
+.producto__detalle {
+  font-size: 1.2rem;
+  text-align: center; }
+
+.producto__precio {
+  font-size: 1rem;
+  text-align: center;
+  color: #BA337A;
+  font-weight: 700; }
+
+.producto__carrito input {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  text-align: center; }
+
+.producto__carrito button {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  text-align: center;
+  border: none;
+  background-color: #A3BD31;
+  color: #fff;
+  cursor: pointer; }
+  .producto__carrito button:hover {
+    transform: scale(1.1, 1.1);
+    background-color: #BA337A;
+    transition: 1s; }
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-bottom: solid 8px #c9c9c9;
+  margin-bottom: 20px; }
+
+.galeria img {
+  width: 100%; }
+
+.personalizar-animacion {
+  background-image: url(../img/bg-animation.jpg);
+  height: 50vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  text-align: center; }
+
+.personalizar-animacion h2::before {
+  content: '';
+  animation: cambiarTexto 10s linear infinite;
+  color: #BA337A; }
+
+@keyframes cambiarTexto {
+  0% {
+    content: '"CREAMOS A TU PERSONAJE"';
+    color: #A3BD31; }
+  25% {
+    content: '1.- Elige tu personaje';
+    color: #BA337A; }
+  50% {
+    content: '2.- Envia tu foto';
+    color: #A3BD31; }
+  75% {
+    content: '3.- Agendamos tu pedido';
+    color: #BA337A; }
+  100% {
+    content: '4.- Entrega de la piñata';
+    color: #A3BD31; } }
+
+.footerInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  text-align: center; }
+
+.direccion, .horarios {
+  font-size: 1.4rem; }
+
+.mapa iframe {
+  width: 100%; }
+
+.nosotros__contenido {
+  text-align: justify;
+  font-size: 1.2rem; }
+
+.nosotros__imagen img {
+  width: 100%; }
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .formulario-personalizadas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+  .formulario-personalizadas input {
+    background-color: #A3BD31;
+    border: none;
+    width: 100%;
+    text-align: center; }
+  .formulario-personalizadas button {
+    background-color: #BA337A;
+    margin: 1rem;
+    padding: .5rem 4rem;
+    color: #fff;
+    border: none;
+    width: 100%; }
+  .formulario-personalizadas input:focus-visible {
+    outline: none; }
+
+.tienda p {
+  background-color: #ffc107;
+  font-weight: 700;
+  text-align: center; }
+
+.imagen-blog {
+  height: 40vh;
+  object-fit: cover; }
+
+.formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem; }
+  .formulario-contacto input {
+    border: none;
+    border-bottom: 3px solid #c9c9c9; }
+  .formulario-contacto textarea {
+    border: none;
+    border-bottom: 3px solid #c9c9c9; }
+  .formulario-contacto button {
+    background-color: #A3BD31;
+    color: #fff;
+    text-transform: uppercase;
+    border: none; }
+    .formulario-contacto button:hover {
+      background-color: #BA337A; }
+
+@media (max-width: 768px) {
+  .tienda-incio {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center; }
+  .footerInfo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center; }
+  .direccion, .horarios {
+    font-size: 1rem;
+    text-align: center; } }
+
+@media (max-width: 425px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+    list-style: none; }
+  .social-media a {
+    padding: 1rem; }
+  .footerInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; } }
+
+.imgBlogentrada1 {
+  background-image: url(../img/entrada1.jpg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  background-position: center center;
+  background-size: cover; }
+
+.imgBlogentrada2 {
+  background-image: url(../img/entrada2.jpg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  background-position: center center;
+  background-size: cover; }
+
+.imgBlogentrada3 {
+  background-image: url(../img/entrada3.jpg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  background-position: center center;
+  background-size: cover; }
